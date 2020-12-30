@@ -1,12 +1,15 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import BookList from './components/BookList';
+import PackingList from './components/PackingList';
+import PackingContextProvider from './contexts/PackingContext';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <BookList />
+      <PackingContextProvider>
+        <PackingList />
+      </PackingContextProvider>
     </div>
   );
 }
