@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { PackingContext } from '../contexts/PackingContext';
 import ItemDetail from './ItemDetail';
+import NewPackingItemForm from './NewPackingItemForm';
 
 const PackingList = () => {
   const { items } = useContext(PackingContext);
@@ -12,6 +13,7 @@ const PackingList = () => {
           return ( <ItemDetail item={item} key={item.id} />)
         })}
       </ul>
+      <NewPackingItemForm />
     </div>
    );
 }
