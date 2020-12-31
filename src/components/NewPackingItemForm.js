@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 import { PackingContext } from '../contexts/PackingContext';
 
 const NewPackingItemForm = () => {
-  const { addItem } = useContext(PackingContext)
+  const { addItem } = useContext(PackingContext);
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
 

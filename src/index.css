@@ -5,9 +5,103 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #EA3788;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  text-align: center;
+}
+
+.navbar {
+  background: #361134;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  color: #F391A0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar li {
+  padding: 0 10px;
+}
+
+.navbar li:hover {
+  cursor: pointer;
+  color: #B0228C;
+}
+
+.packing-list {
+  margin: 20px auto;
+  padding: 20px;
+  width: 75%;
+  border: dashed 2px #B0228C;
+}
+.packing-list ul {
+  margin: 10px 0 30px;
+}
+
+.packing-list h1, .packing-list p {
+  color: #361134;
+}
+
+.item {
+  border-radius: 0 50px;
+  background: #361134;
+  padding: 2px 0; 
+  width: 100%;
+  margin: 10px auto;
+}
+
+.item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  text-decoration: line-through;
+}
+
+.item h1 {
+  color:#F391A0;
+  font-size: 20px;
+}
+
+.item p {
+  color:#F391A0;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+hr {
+  background-color: #361134;
+  height: 2px;
+  border: 0;
+}
+
+input {
+  background-color: #F391A0;
+  border-radius: 2px;
+  border: none;
+  margin: 10px 5px;
+}
+
+input::placeholder {
+  color:  black;
+  padding: 2px;
+}
+
+button {
+  border-radius: 2px;
+  background-color: #B0228C;
+  border: none;
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+  color: #F391A0;
 }

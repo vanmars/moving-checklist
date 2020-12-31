@@ -13,8 +13,12 @@ const PackingContextProvider = (props) => {
     setItems([...items, {name, room, id: v4()} ])
   }
 
+  const deleteItem = (id) => {
+    setItems(items.filter(item => item.id !== id))
+  }
+
   return ( 
-    <PackingContext.Provider value={{items, addItem }}>
+    <PackingContext.Provider value={{items, addItem, deleteItem }}>
       { props.children }
     </PackingContext.Provider>
    );
