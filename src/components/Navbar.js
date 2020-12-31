@@ -1,14 +1,13 @@
 import React from 'react';
+import 'fontsource-roboto';
+
 
 const Navbar = () => {
   return ( 
     <div className='navbar'>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-      </ul>
+
     </div>
    );
 }
  
-export default Navbar; 
+export default Navbar;
