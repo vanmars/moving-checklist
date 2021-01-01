@@ -1,5 +1,6 @@
 import React, {useState } from 'react';
 import Header from './components/Header';
+import Splash from './components/Splash';
 import MovingList from './components/MovingList';
 import ItemDetail from './components/ItemDetail';
 import NewItemForm from './components/NewItemForm';
@@ -7,8 +8,6 @@ import Navbar from './components/Navbar';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import AddIcon from '@material-ui/icons/Add';
 import ListIcon from '@material-ui/icons/List';
-import 'fontsource-roboto';
-import Typography from '@material-ui/core/Typography';
 import ChecklistContextProvider from './contexts/ChecklistContext';
 
 function App() {
@@ -27,7 +26,7 @@ function App() {
 
   const visibleBody = formVisible ? <NewItemForm setFormVisible={setFormVisible}/> : selectedItem ? 
     <ItemDetail item={selectedItem} setSelectedItem={setSelectedItem} />: checklistVisible ? 
-    <MovingList setSelectedItem={setSelectedItem} /> : <Typography variant="h3" component="h1">Welcome Home</Typography>;
+    <MovingList setSelectedItem={setSelectedItem} /> : <Splash />;
 
   return (
     <div className="App">
