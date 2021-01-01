@@ -31,10 +31,10 @@ body {
   color: #6bd19a; 
 }
 
-/* .header icon:hover {
+.header-icon:hover {
   color: darkgrey;
   cursor: pointer;
-} */
+}
 
 
 /* MOVING CHECKLIST */
@@ -143,6 +143,7 @@ body {
 
 .nav-icon:hover {
   color: #6bd19a;
+  cursor: pointer;
 }
 
 .splash-container {

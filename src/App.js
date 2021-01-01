@@ -15,12 +15,12 @@ function App() {
   const [formVisible, setFormVisible] = useState(false)
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const leftIcon = formVisible ? <ArrowBackIosIcon onClick={ () => setFormVisible(false) }/> : selectedItem ? 
-    <ArrowBackIosIcon onClick={ () => setSelectedItem(null) }/>: checklistVisible ? 
-    <ArrowBackIosIcon onClick={ () => setChecklistVisible(false) }/> : <ListIcon  onClick={ () => setChecklistVisible(true) }/>;
+  const leftIcon = formVisible ? <ArrowBackIosIcon onClick={ () => setFormVisible(false) } className="header-icon" /> : selectedItem ? 
+    <ArrowBackIosIcon onClick={ () => setSelectedItem(null) } className="header-icon" />: checklistVisible ? 
+    <ArrowBackIosIcon onClick={ () => setChecklistVisible(false) } className="header-icon"/> : <ListIcon  onClick={ () => setChecklistVisible(true) } className="header-icon"/>;
 
   const rightIcon = formVisible || selectedItem ? <AddIcon className="hiddenAddIcon" /> : checklistVisible ? 
-    <AddIcon onClick={ () => setFormVisible(true) }/>: <AddIcon className="hiddenAddIcon" />;
+    <AddIcon onClick={ () => setFormVisible(true) } className="header-icon" />: <AddIcon className="hiddenAddIcon" />;
 
   const headerText = formVisible ? "Add New Item" : selectedItem ? selectedItem.name : checklistVisible ? "Moving Checklist" : "My Move";
 
