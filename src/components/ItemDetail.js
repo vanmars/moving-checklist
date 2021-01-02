@@ -19,6 +19,7 @@ const ItemDetail = (props) => {
 
   const completedMessage = item.complete ? "Complete!" : "Incomplete";
   const changeStatusMessage = item.complete ? "Mark Incomplete" : "Mark Complete";
+
   return ( 
     <div className="item-detail">
       <div className="status-section">
@@ -28,7 +29,6 @@ const ItemDetail = (props) => {
           variant="contained" 
           fontSize="small"
           onClick={()=> toggleComplete(item.id)}>
-          
           {changeStatusMessage}
           </Button>
         </div>

@@ -18,15 +18,15 @@ const ChecklistContextProvider = (props) => {
   }
 
   const updateName = (id, name) => {
-    // let item = items.filter((item) => { item.id == id })[0];
-    // item.name = name;
-    // setItems(items.filter((item) => { item.id !== id}).concat([...item]));
+    let item = items.filter(item => item.id == id )[0];
+    item.name = name;
+    setItems(items.filter(item => item.id !== id).concat([...item]));
   }
 
   const toggleComplete = (id) => {
-    // let item = items.filter((item) => { item.id == id})[0];
-    // item.complete = !item.complete;
-    // setItems(items.filter((item) => { item.id !== id}).concat([...item]));
+    let item = items.filter(item => item.id == id)[0];
+    item.complete = !item.complete;
+    setItems(items.filter(item => item.id !== id).concat([...item]));
   }
 
   return ( 
