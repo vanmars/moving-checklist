@@ -4,10 +4,9 @@ import './index.css';
 import App from './App';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { firestoreReducer } from 'redux-firestore';
+import { firestoreReducer, createFirestoreInstance } from 'redux-firestore';
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
-import { createFirestoreInstance } from 'redux-firestore';
-import firebase from "./firebase";
+import firebase from './firebase';
 
 const store = createStore(firestoreReducer);
 
