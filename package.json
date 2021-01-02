@@ -12,7 +12,11 @@
     "fontsource-roboto": "^4.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-redux-firebase": "^3.8.1",
     "react-scripts": "4.0.1",
+    "redux": "^4.0.5",
+    "redux-firestore": "^0.14.0",
     "uuid": "^8.3.2",
     "web-vitals": "^0.2.4"
   },
