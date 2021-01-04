@@ -13,19 +13,19 @@ const MovingList = (props) => {
   
     return ( 
       <div className='moving-list'>
-        <Typography variant="subtitle2" component="p" className="items-counter">You have {items.length} items on your checklist.</Typography>
+        <Typography variant="subtitle2" component="p" className="items-counter">You have {Object.keys(items).length} items on your checklist.</Typography>
   
         <ul>
           {Object.values(items).map(item => {
             const icon = item.complete ? 
             <CheckBoxIcon 
-              // onClick={()=>toggleComplete(item.id)} 
+              onClick={()=>toggleComplete(item.id)} 
               fontSize='medium'
               color='disabled'
               className="checkbox"
             /> : 
             <CheckBoxOutlineBlankIcon 
-              // onClick={()=>toggleComplete(item.id)}  
+              onClick={()=>toggleComplete(item.id)}  
               fontSize='medium'
               color='disabled'
               className="checkbox"

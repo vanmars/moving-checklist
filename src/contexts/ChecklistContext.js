@@ -1,13 +1,17 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import { v4 } from 'uuid';
 
 export const ChecklistContext = createContext();
 
 const ChecklistContextProvider = (props) => {
-  const [items, setItems] = useState({
-    1: { name: 'Pack office books', complete: false, id: 1},
-    2: { name: 'Reserve U-Haul', complete: false, id: 2}
+  const [items, setItems] = useState(() => {
+    const localData = localStorage.getItem('items');
+    return localData ? JSON.parse(localData) : {};
   })
+
+  useEffect(() => {
+    localStorage.setItem('items', JSON.stringify(items))
+  }, [items])
 
   const addItem = (name) => {
     const id = v4();
