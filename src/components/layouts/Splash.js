@@ -9,7 +9,7 @@ const Splash = () => {
       <Typography variant="h3" component="h1">Welcome Home</Typography>
       <LocalShippingIcon id="animated-truck" />
     </div>
-   );
+  );
 }
  
 export default Splash;

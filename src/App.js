@@ -1,10 +1,10 @@
 import React, {useState } from 'react';
-import Header from './components/Header';
-import Splash from './components/Splash';
-import MovingList from './components/MovingList';
-import ItemDetail from './components/ItemDetail';
-import NewItemForm from './components/NewItemForm';
-import Navbar from './components/Navbar';
+import Header from './components/layouts/Header';
+import Splash from './components/layouts/Splash';
+import MovingList from './components/moving/MovingList';
+import ItemDetail from './components/moving/ItemDetail';
+import NewItemForm from './components/moving/NewItemForm';
+import Navbar from './components/layouts/Navbar';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import AddIcon from '@material-ui/icons/Add';
 import ListIcon from '@material-ui/icons/List';

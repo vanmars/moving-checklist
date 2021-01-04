@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
-import { ChecklistContext } from '../contexts/ChecklistContext';
+import PropTypes from 'prop-types';
+import { ChecklistContext } from '../../contexts/ChecklistContext';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
@@ -31,7 +32,11 @@ const NewItemForm = (props) => {
           </Button>
       </form>
     </div>
-   );
+  );
+}
+
+NewItemForm.propTypes = {
+  setFormVisible: PropTypes.func
 }
  
 export default NewItemForm;
