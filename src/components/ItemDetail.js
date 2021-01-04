@@ -13,8 +13,7 @@ const ItemDetail = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     updateName(item.id, name);
-    setName('');
-    setSelectedItem(false);
+    setSelectedItem(null);
   };
 
   const completedMessage = item.complete ? "Complete!" : "Incomplete";
