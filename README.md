@@ -1,8 +1,9 @@
-<h1 align="center">:articulated_lorry: Packing To Do List</h1>  
-<img align="center" style="width: 300px; margin:auto" src="public/img/appImage.png">
+<h1 align="center">:articulated_lorry: Packing To Do List</h1> 
 <p align="center"><b>React App for Tracking Moving Tasks</b></p>
 <p align="center"><em>3 January 2020</em></p>
-<p align="center">By Vanessa Stewart</p>
+<p align="center">By Vanessa Stewart</p> 
+<img align="center" style="height: 300px; margin:auto" src="public/img/appImage.png">
+
 <hr/>
 
 ## :world_map: Description
