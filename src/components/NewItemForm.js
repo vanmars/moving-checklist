@@ -1,26 +1,16 @@
 import React, {useState, useContext} from 'react';
-// import { ChecklistContext } from '../contexts/ChecklistContext';
+import { ChecklistContext } from '../contexts/ChecklistContext';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { useFirestore } from 'react-redux-firebase';
-
 
 const NewItemForm = (props) => {
   const { setFormVisible } = props;
-  // const { addItem } = useContext(ChecklistContext);
+  const { addItem } = useContext(ChecklistContext);
   const [name, setName] = useState('');
-  const firestore = useFirestore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // addItem(name);
-    firestore.collection('checklist').add(
-      {
-        name,
-        isComplete: false
-      }
-    );
-    setName('');
+    addItem(name);
     setFormVisible (false);
   };
 

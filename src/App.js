@@ -11,10 +11,11 @@ import ListIcon from '@material-ui/icons/List';
 import ChecklistContextProvider from './contexts/ChecklistContext';
 
 function App() {
-  const [checklistVisible, setChecklistVisible ] = useState(true)
+  const [checklistVisible, setChecklistVisible ] = useState(false)
   const [formVisible, setFormVisible] = useState(false)
   const [selectedItem, setSelectedItem] = useState(null);
 
+  // Conditional Rendering
   const leftIcon = formVisible ? <ArrowBackIosIcon onClick={ () => setFormVisible(false) } className="header-icon" /> : selectedItem ? 
     <ArrowBackIosIcon onClick={ () => setSelectedItem(null) } className="header-icon" />: checklistVisible ? 
     <ArrowBackIosIcon onClick={ () => setChecklistVisible(false) } className="header-icon"/> : <ListIcon  onClick={ () => setChecklistVisible(true) } className="header-icon"/>;

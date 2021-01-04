@@ -9,6 +9,7 @@ const ChecklistContextProvider = (props) => {
     { name: 'Reserve U-Haul', complete: false, id: 2}
   ])
 
+
   const addItem = (name) => {
     setItems([...items, {name, complete: false, id: v4()} ]);
   }
@@ -18,13 +19,14 @@ const ChecklistContextProvider = (props) => {
   }
 
   const updateName = (id, name) => {
-    let item = items.filter(item => item.id == id )[0];
-    item.name = name;
-    setItems(items.filter(item => item.id !== id).concat([...item]));
+    let newItem = items.filter(item => item.id == id );
+    newItem.name = name;
+    const newItemState = items.filter(item => item.id !== id);
+    setItems(newItemState.concat([...newItem]));
   }
 
   const toggleComplete = (id) => {
-    let item = items.filter(item => item.id == id)[0];
+    let item = items.filter(item => item.id == id);
     item.complete = !item.complete;
     setItems(items.filter(item => item.id !== id).concat([...item]));
   }
