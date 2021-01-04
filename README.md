@@ -1,5 +1,6 @@
 <h1 align="center">:articulated_lorry: Packing To Do List</h1> 
 <p align="center"><b>React App for Tracking Moving Tasks</b></p>
+<a align="center" href='https://moving-checklist.vercel.app/'>Deployment Link</a>
 <p align="center"><em>3 January 2020</em></p>
 <p align="center">By Vanessa Stewart</p> 
 <img align="center" style="height: 300px; margin:auto" src="public/img/appImage.png">
